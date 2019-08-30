@@ -18,14 +18,14 @@ class RepairOrderDetail(RetrieveUpdateDestroyAPIView):
     serializer_class = RepairOrderSerializer
     queryset = RepairOrder.objects.all()
 
-    def get(self, request, id, args, *kwargs):
-        return self.retrieve(self, request, args, *kwargs)
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(self, request, *args, **kwargs)
 
-    def put(self, request, args, *kwargs):
-        return self.update(request, args, *kwargs)
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
 
-    def patch(self, request, args, *kwargs):
-        return self.partial_update(request, args, *kwargs)
+    def patch(self, request, *args, **kwargs):
+        return self.partial_update(request, *args, **kwargs)
 
-    def delete(self, request, args, *kwargs):
-        return self.destroy(self, request, args, *kwargs)
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(self, request, *args, **kwargs)
