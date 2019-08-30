@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "9bb59425-daa6-4958-8952-c25bed31e908",
+		"name": "CarRo",
+		"description": "CarRo is a car repair management software",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list-repair",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/repair/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"repair",
+						""
+					]
+				},
+				"description": "list of repair orders"
+			},
+			"response": []
+		},
+		{
+			"name": "add-repair",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n        \"complaint\": \"nope\",\n        \"vehicle\": {\n            \"make\": \"usala\",\n            \"model\": \"A24\",\n            \"license_no\": \"G5D5\"\n        },\n        \"customer\": {\n            \"name\": \"jack\",\n            \"email_id\": \"jack@gmail.com\",\n            \"mobile_no\": \"4843646633\"\n        }\n    }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/repair/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"repair",
+						""
+					]
+				},
+				"description": "adding repair orders"
+			},
+			"response": []
+		},
+		{
+			"name": "Get-repair-order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/repair/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"repair",
+						"2"
+					]
+				},
+				"description": "gets repair order"
+			},
+			"response": []
+		},
+		{
+			"name": "edit-repair-order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"date\": \"2019-08-30T10:15:17.987731\",\n    \"status\": \"DONE\",\n    \"complaint\": \"engine\",\n    \"vehicle\": {\n        \"make\": \"Honda\",\n        \"model\": \"Civic\",\n        \"license_no\": \"M4D5\"\n    },\n    \"customer\": {\n        \"name\": \"John\",\n        \"email_id\": \"john@gmail.com\",\n        \"mobile_no\": \"5456565656\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/repair/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"repair",
+						"2"
+					]
+				},
+				"description": "Edit repair order"
+			},
+			"response": []
+		},
+		{
+			"name": "editing-a-few-things-in-repair",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"complaint\": \"seat\",\n\t\"status\": \"REVIEWING\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/repair/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"repair",
+						"2"
+					]
+				},
+				"description": "editing a few things in repair"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-repair-order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/repair/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"repair",
+						"2"
+					]
+				},
+				"description": "Delete repair order"
+			},
+			"response": []
+		}
+	]
+}
