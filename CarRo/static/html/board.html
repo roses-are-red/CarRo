@@ -1,0 +1,23 @@
+<div>
+    <table class="table table-striped">
+        <thead>
+        <th>Date and Time</th>
+        <th>Vehicle Name</th>
+        <th>License No</th>
+        <th>Customer Name</th>
+        <th>Complaint</th>
+        <th>Status</th>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="repairOrder in repairOrders | orderBy:'date'">
+            <td>{{ repairOrder.date }}</td>
+            <td>{{ repairOrder.vehicleName }}</td>
+            <td>{{ repairOrder.vehicle.license_no }}</td>
+            <td>{{ repairOrder.customer.name }}</td>
+            <td>{{ repairOrder.complaint }}</td>
+            <td>{{ repairOrder.status }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

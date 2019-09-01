@@ -128,3 +128,7 @@ mongoengine.connect(
     host="localhost:27017",
     alias="default"
 )
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
